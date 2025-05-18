@@ -1,5 +1,5 @@
 // API endpoints
-const BASE_URL = 'http://localhost:5050/api';
+const BASE_URL = 'https://news-web.azurewebsites.net/api';
 
 // Types
 export interface FinancialItem {

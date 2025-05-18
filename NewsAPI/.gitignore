@@ -34,9 +34,12 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+FileContentIndex/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+NewsAPI/.vs/
+
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -482,3 +485,56 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Build ve debug çıktıları
+bin/
+obj/
+out/
+
+# User-specific dosyalar
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider/JetBrains klasörleri
+.idea/
+
+# Visual Studio çalışma alanı dosyaları
+.vs/
+
+# VS Code klasörleri
+.vscode/
+
+# Design-time build cache
+*.dbtcache.v2
+*.futdcache.v2
+
+# SQLite dosyaları (eğer veritabanını kaynak kodla paylaşmıyorsan)
+*.db
+*.db-shm
+*.db-wal
+
+# DotCover, Resharper, etc.
+_ReSharper*/
+*.DotSettings.user
+
+# Paket yönetimi
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Publish dosyaları
+*.publish.xml
+
+# Log dosyaları
+*.log
+
+# Diğer geçici dosyalar
+*.vsidx
+*.tmp
+*.bak
+*.backup
+
