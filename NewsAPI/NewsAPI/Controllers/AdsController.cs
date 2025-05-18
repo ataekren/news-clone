@@ -20,5 +20,14 @@ namespace NewsAPI.Controllers
         {
             return await _context.Ads.ToListAsync();
         }
+
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<AdModel>> GetAdsItem(int id)
+        {
+            var adsItem = await _context.Ads.FindAsync(id);
+
+            return adsItem;
+        }
     }
 }
