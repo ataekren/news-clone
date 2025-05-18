@@ -38,7 +38,7 @@ export default function AdPlacement({ position }: AdPlacementProps) {
 
   if (loading) {
     return (
-      <div className="hidden md:block xl:block fixed top-1/2 transform -translate-y-1/2 w-[120px] md:w-[160px] h-[300px] md:h-[600px] bg-gray-200 animate-pulse">
+      <div className="hidden lg:block w-[120px] h-[300px] bg-gray-200 animate-pulse rounded-md">
         <div className="h-full w-full"></div>
       </div>
     );
@@ -49,38 +49,7 @@ export default function AdPlacement({ position }: AdPlacementProps) {
   // Mobile view: Show as horizontal banner at the top for small screens
   const isMobileView = 
     <div className="block md:hidden w-full py-1">
-      <div className="relative">
-        <div className="bg-black text-white text-center py-1 text-xs font-medium rounded-t-md flex justify-between items-center px-2">
-          <span>{ad.title}</span>
-          <button 
-            onClick={handleCloseAd}
-            className="text-white hover:text-gray-300 focus:outline-none"
-            aria-label="Close advertisement"
-          >
-            <X size={14} />
-          </button>
-        </div>
-        
-        <Link 
-          to={`/ad/${ad.id}`}
-          className="block"
-        >
-          <img 
-            src={ad.imageUrl} 
-            alt={ad.title}
-            className="w-full h-[100px] object-cover border-x border-b border-gray-200 rounded-b-md shadow-sm"
-          />
-        </Link>
-        <div className="absolute top-8 right-0 bg-black bg-opacity-50 text-white text-xs px-1">
-          Reklam
-        </div>
-      </div>
-    </div>;
-
-  // Desktop/Tablet view: Show as sidebar
-  const isDesktopView = 
-    <div className={`hidden md:block fixed top-1/2 transform -translate-y-1/2 ${position === "left" ? "left-1 md:left-4" : "right-1 md:right-4"} z-30`}>
-      <div className="relative w-[120px] md:w-[160px]">
+      <div className="relative shadow-md">
         <div className="bg-black text-white text-center py-1 text-xs font-medium rounded-t-md flex justify-between items-center px-2">
           <span>{ad.title}</span>
           <button 
@@ -99,9 +68,43 @@ export default function AdPlacement({ position }: AdPlacementProps) {
           <img 
             src={ad.imageUrl} 
             alt={ad.title}
-            className="w-full h-[300px] md:h-[600px] object-cover border-x border-b border-gray-200 rounded-b-md shadow-sm"
+            className="w-full h-[100px] object-cover border-x border-b border-gray-200 rounded-b-md"
           />
         </Link>
+        <div className="absolute top-8 right-0 bg-black bg-opacity-50 text-white text-xs px-1">
+          Reklam
+        </div>
+      </div>
+    </div>;
+
+  // Desktop/Tablet view: Show as sidebar
+  const isDesktopView = 
+    <div className="sticky top-[200px]">
+      <div className="relative w-[120px] md:w-[120px] lg:w-[160px] shadow-md rounded-md overflow-hidden">
+        <div className="bg-black text-white text-center py-1 text-xs font-medium rounded-t-md flex justify-between items-center px-2">
+          <span>{ad.title}</span>
+          <button 
+            onClick={handleCloseAd}
+            className="text-white hover:text-gray-300 focus:outline-none"
+            aria-label="Reklamı Kapat"
+          >
+            <X size={14} />
+          </button>
+        </div>
+        
+        <Link 
+          to={`/ad/${ad.id}`}
+          className="block"
+        >
+          <img 
+            src={ad.imageUrl} 
+            alt={ad.title}
+            className="w-full h-[300px] lg:h-[400px] xl:h-[600px] object-cover border-x border-b border-gray-200"
+          />
+        </Link>
+        <div className="absolute top-8 right-0 bg-black bg-opacity-50 text-white text-xs px-1">
+          Reklam
+        </div>
       </div>
     </div>;
 

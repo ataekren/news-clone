@@ -4,8 +4,8 @@ A responsive news portal built with React frontend and .NET backend, featuring i
 
 ## Deployment
 
-- **Frontend**: 
-- **Backend API**: 
+- **Frontend**: https://ata-news.vercel.app
+- **Backend**: https://news-web.azurewebsites.net/swagger/index.html
 
 ## Tech Stack
 
