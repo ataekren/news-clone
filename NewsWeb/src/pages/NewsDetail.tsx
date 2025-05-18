@@ -92,7 +92,7 @@ const NewsDetail = () => {
         
         <div className="mt-6 mb-6 text-center">
           <Link to="/" className="text-blue-600 hover:underline">
-            ← Back to homepage
+            ← Ana Sayfaya Dön
           </Link>
         </div>
       </div>
