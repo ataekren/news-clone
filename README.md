@@ -21,6 +21,7 @@ A responsive news portal built with React frontend and .NET backend, featuring i
 - **Tailwind CSS**: Utility-first CSS framework
 - **Vite**: Build tool and development server
 - **shadcn-ui**: Component library
+- **prd.place**: Placeholder images
 
 
 ## Installation and Setup
